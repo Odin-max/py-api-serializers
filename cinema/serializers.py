@@ -33,11 +33,11 @@ class CinemaHallSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "rows",
-            "seats_in_row"
+            "seats_in_row",
             "capacity"
         ]
     def get_capacity(self, obj):
-        return obj.rows * obj.seats_in_rows
+        return obj.rows * obj.seats_in_row
 
 
 class MovieListSerializer(serializers.ModelSerializer):
